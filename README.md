@@ -1,1 +1,2 @@
-# pokemon-group-gym
+# personalPokedex
+Second Assignment NYCDA

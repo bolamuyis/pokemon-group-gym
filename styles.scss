@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    background-color: rgb(252, 212, 91);
+    color: rgb(84, 88, 92);
+    padding: .2em;
+    border-radius: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+}
+footer {
+    text-align: center;
+    line-height: .75em;
+    color: rgb(198, 198, 198);
+    padding: 1em;
+}
+
+.value {
+    display: block;
+    font-weight: bolder;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.col-sm {
+    height: 0px;
+}
+.card {
+    background-color: rgb(84, 88, 92) ;
+}
+.card .first {
+    opacity: 0;
+}
+
+#cardContainer {
+    font-size: 1.25em;
+    border-radius: 1em;
+    animation: opacity-ani;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    margin: 0 0 2rem 0;
+}
+#cardContainer:nth-last-child(1) {
+    visibility: hidden;
+    padding: 100px;
+}
+@keyframes opacity-ani {
+    from {     
+        opacity: 0;
+        left: 1500px;   
+      }   
+    to {     
+        opacity:1;
+        left: 0;   
+    }
+}
+.jumbotron {
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo .jumbotron img {
+    position: relative;
+    left: -600px;
+    animation: poke;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes poke {
+    from {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+@media (max-width: 500px) {
+    footer {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    #cardContainer {
+        margin: 0 0 .75rem 0;
+    }
+    #cardContainer:nth-last-child(1) {
+        position: absolute;
+        top: 200px;
+        z-index: -1;
+    }
+}
+@media (min-width: 501px) and (max-width: 701px) {
+    footer {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    #cardContainer {
+        margin: 0 0 2em 0;
+    }
+   
+}
