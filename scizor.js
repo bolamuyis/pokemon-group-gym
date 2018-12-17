@@ -7,6 +7,7 @@ axios.get("https://pokeapi.co/api/v2/pokemon/212/")
     const data = response.data;
     console.log(data);
 
+
 //declare and empty array to capture all the abilities
 var abilitiesArray = [];
 

@@ -7,13 +7,12 @@ axios.get("https://pokeapi.co/api/v2/pokemon/649/")
     const data = response.data;
     console.log(data); 
 
-//declare and empty array to capture all the abilities
+// Capture all the indexes of abilities in to this array
 var abilitiesArray = [];
-
-// Create a loop that brings in all the abilities data
 for (let i=0; i<data.abilities.length; i++){
     abilitiesArray.push(data.abilities[i].ability.name);
-}
+} 
+
 let electivire = new Pokemon(
     data.forms[0].name,
     //data.abilities[0].ability.name,

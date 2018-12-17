@@ -1,3 +1,3 @@
 //alert("Works!");
 "use strict";
-document.body.style.backgroundImage = "url('images/home-bg.png')";
+document.body.style.backgroundImage = "url('images/home-colored-bg.png')";
