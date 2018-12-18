@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
 }
+.hover-content {
+    display:none;
+}
+.parent:hover .hover-content {
+    display:block;
+}
 p {
     background-color: rgb(252, 212, 91);
     color: rgb(84, 88, 92);
