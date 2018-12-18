@@ -65,7 +65,7 @@ ASQ()
         
         var span = document.createElement('span');
         span.className = 'value2';
-        const U = document.getElementById('electivireWM');
+        const U = document.querySelector('.value');
         console.log(10,electivire.moves.length, U)
         U.appendChild(span);    
         for(var i = 0; i < 72; i++){  
