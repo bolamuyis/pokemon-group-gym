@@ -1,6 +1,6 @@
 "use strict"
 document.body.style.backgroundColor = "rgb(254, 214, 90)";
-document.body.style.backgroundImage = "url('images/genesect-bg.png')";
+document.body.style.backgroundImage = "url('images/genesec-bg.png')";
 
 function ajax(url, cb) {
     axios.get(url).then((r) => {
