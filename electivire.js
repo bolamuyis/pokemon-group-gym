@@ -29,17 +29,19 @@ ASQ()
 
         // capture the moves index and store in an array
         var movesArray = [];
+
         var movesInfoArray = [];
+
         var p_URLs = [];
+
         for (let i = 0; i < data.moves.length; i++) {
             movesArray.push(data.moves[i].move.name);
             p_URLs.push(data.moves[i].move.url);
             var p2 = getFile(p_URLs[i]);
             var moveInfo = yield p2;
-            movesInfoArray.push(['Accuracy: ' + moveInfo.accuracy, ' Power: ' + moveInfo.power , ' Priority: ' + moveInfo.priority]);
+            movesInfoArray.push(['Accuracy: ' + moveInfo.accuracy, ' Power: ' + moveInfo.power, ' Priority: ' + moveInfo.priority]);
         }
-        console.log(movesInfoArray);
-
+        
 
 
         //declare and empty array to capture all the abilities
@@ -61,7 +63,7 @@ ASQ()
         document.getElementById("electivire").innerHTML += `<p><span class="key">${"Defense"}<span class="value"><strong>${electivire.defense}</strong></span></p>`
         document.getElementById("electivire").innerHTML += `<p><span class="key">${"HP"}<span class="value"><strong>${electivire.hp}</strong></span></p>`
         document.getElementById("electivireWM").innerHTML += `<p><span class="key">${"Weight"}<span class="value"><strong>${electivire.weight}</strong></span></p>`
-        //document.getElementById("electivireWM").innerHTML += `<p><span class="value">${"Moves"}</span></p>`
+        
         var electivireWM = document.getElementById("electivireWM");
         var moveParagraph = document.createElement("p");
         var moveSpan = document.createElement("span");
@@ -72,10 +74,8 @@ ASQ()
         var span = document.createElement('span');
         span.className = 'value2';
         const U = document.querySelector('.value');
-        console.log(10, electivire.moves.length, U)
         moveSpan.appendChild(span);
         for (var i = 0; i < 10; i++) {
-            console.log(i);
             var parent = document.createElement('div');
             parent.innerHTML = electivire.moves[i];
             parent.className = 'parent';
