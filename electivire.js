@@ -36,7 +36,7 @@ ASQ()
             p_URLs.push(data.moves[i].move.url);
             var p2 = getFile(p_URLs[i]);
             var moveInfo = yield p2;
-            movesInfoArray.push([moveInfo.name, moveInfo.accuracy, moveInfo.power, moveInfo.pp, moveInfo.priority]);
+            movesInfoArray.push(['Accuracy: ' + moveInfo.accuracy, ' Power: ' + moveInfo.power , ' Priority: ' + moveInfo.priority]);
         }
         console.log(movesInfoArray);
 
@@ -74,7 +74,7 @@ ASQ()
         const U = document.querySelector('.value');
         console.log(10, electivire.moves.length, U)
         moveSpan.appendChild(span);
-        for (var i = 0; i < electivire.moves.length; i++) {
+        for (var i = 0; i < 10; i++) {
             console.log(i);
             var parent = document.createElement('div');
             parent.innerHTML = electivire.moves[i];
@@ -85,10 +85,7 @@ ASQ()
             parent.appendChild(baby);
             span.appendChild(parent);
         }
-
     })
-
     .val(function () {
-
         console.log("Complete!");
     });
