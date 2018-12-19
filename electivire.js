@@ -61,14 +61,20 @@ ASQ()
         document.getElementById("electivire").innerHTML += `<p><span class="key">${"Defense"}<span class="value"><strong>${electivire.defense}</strong></span></p>`
         document.getElementById("electivire").innerHTML += `<p><span class="key">${"HP"}<span class="value"><strong>${electivire.hp}</strong></span></p>`
         document.getElementById("electivireWM").innerHTML += `<p><span class="key">${"Weight"}<span class="value"><strong>${electivire.weight}</strong></span></p>`
-        document.getElementById("electivireWM").innerHTML += `<p><span class="value">${"Moves"}</span>`
-        
+        //document.getElementById("electivireWM").innerHTML += `<p><span class="value">${"Moves"}</span></p>`
+        var electivireWM = document.getElementById("electivireWM");
+        var moveParagraph = document.createElement("p");
+        var moveSpan = document.createElement("span");
+        moveParagraph.appendChild(moveSpan);
+        moveSpan.className = "value";
+        moveSpan.innerHTML = `${"Moves"}`
+        electivireWM.appendChild(moveParagraph);
         var span = document.createElement('span');
         span.className = 'value2';
         const U = document.querySelector('.value');
-        console.log(10,electivire.moves.length, U)
-        U.appendChild(span);    
-        for(var i = 0; i < 72; i++){  
+        console.log(10, electivire.moves.length, U)
+        moveSpan.appendChild(span);
+        for (var i = 0; i < electivire.moves.length; i++) {
             console.log(i);
             var parent = document.createElement('div');
             parent.innerHTML = electivire.moves[i];
@@ -79,10 +85,10 @@ ASQ()
             parent.appendChild(baby);
             span.appendChild(parent);
         }
-       
+
     })
 
     .val(function () {
-        
+
         console.log("Complete!");
     });
